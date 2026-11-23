@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoop Central | Compare Players</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="final.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="hoopcentral.html" aria-label="Hoop Central home">Hoop Central</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="hoopcentral.html">Home</a>
+            <a href="lineup.html">NBA Leaders</a>
+            <a href="players.html">Players</a>
+            <a href="shots.html">Shot Analysis</a>
+            <a href="compare.html" aria-current="page">Compare</a>
+            <a href="game.html">Game</a>
+            <a href="schedule.html">Schedule</a>
+        </nav>
+    </header>
+    <main class="page-content">
+        <p class="eyebrow">Head-to-head</p>
+        <h1>Compare Players</h1>
+        <p class="intro">Choose a stat category and two of its current ESPN leaders to compare their per-game averages. Values are from Nov. 11, 2026.</p>
+        <form class="compare-form" id="compare-form">
+            <label for="stat-category">Stat category
+                <select id="stat-category" name="stat-category">
+                    <option value="points">Points per game</option>
+                    <option value="rebounds">Rebounds per game</option>
+                    <option value="assists">Assists per game</option>
+                </select>
+            </label>
+            <label for="player-one">First player
+                <select id="player-one" name="player-one">
+                    <option value="luka">Luka Doncic</option>
+                    <option value="anthony">Anthony Edwards</option>
+                    <option value="curry">Stephen Curry</option>
+                    <option value="victor">Victor Wembanyama</option>
+                    <option value="shai">Shai Gilgeous-Alexander</option>
+                </select>
+            </label>
+            <span class="versus" aria-hidden="true">VS</span>
+            <label for="player-two">Second player
+                <select id="player-two" name="player-two">
+                    <option value="anthony">Anthony Edwards</option>
+                    <option value="luka">Luka Doncic</option>
+                    <option value="curry">Stephen Curry</option>
+                    <option value="victor">Victor Wembanyama</option>
+                    <option value="shai">Shai Gilgeous-Alexander</option>
+                </select>
+            </label>
+            <button class="button" type="submit">Compare stats</button>
+        </form>
+        <p id="compare-message" class="status-message" aria-live="polite"></p>
+        <div class="table-wrap">
+            <table id="comparison-table">
+                <caption>ESPN scoring comparison · points per game</caption>
+                <thead><tr><th scope="col">Stat</th><th id="first-player-heading" scope="col">Luka Doncic</th><th id="second-player-heading" scope="col">Anthony Edwards</th></tr></thead>
+                <tbody>
+                    <tr><th id="stat-name" scope="row">Points per game</th><td id="first-stat">39.3</td><td id="second-stat">33.2</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="data-note">Retrieved Nov. 11, 2026. Source: <a href="https://www.espn.com/nba/stats">ESPN NBA stats</a>.</p>
+    </main>
+    <footer class="site-footer"><p> 2026 Hoop Central</p></footer>
+</body>
+</html>
